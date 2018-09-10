@@ -3,7 +3,7 @@
   <div class="armor-list" *ngIf="allArmor$ | async as allArmor">
     <ul *ngFor="let a of allArmor">
       <li>ID: {{ a.id }}</li>
-      <li>Name: {{ a.armorName }}</li>
+      <li>Name: <a [routerLink]="['/itemDetails', a.id]"> {{ a.armorName }}</a></li>
       <li>Level: {{ a.armorLevel }}</li>
       <li>Type: {{ a.armorType }}</li>
       <li>Health: {{ a.armorStats?.health }}</li>

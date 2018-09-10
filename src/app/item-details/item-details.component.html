@@ -1,0 +1,11 @@
+<h2>Armor Details</h2>
+
+<ul *ngIf="armor">
+  <li>ID: {{ armor.id }}</li>
+  <li>Name: {{ armor.armorName }}</li>
+  <li>Level: {{ armor.armorLevel }}</li>
+  <li>Type: {{ armor.armorType }}</li>
+  <li>Health: {{ armor.armorStats?.health }}</li>
+  <li>Power: {{ armor.armorStats?.power }}</li>
+  <li>Defence: {{ armor.armorStats?.defense }}</li>
+</ul>

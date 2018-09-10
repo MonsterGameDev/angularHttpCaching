@@ -17,7 +17,7 @@ export class DataService {
   }
 
   getWeapons(): Observable<Weapon[]> {
-    return this._http.get<Weapon[]>(`${this.baseUrl}/weapon`);
+    return this._http.get<Weapon[]>(`${this.baseUrl}/weapons`);
   }
 
   getPotions(): Observable<Potion[]> {

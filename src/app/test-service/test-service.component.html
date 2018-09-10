@@ -1,3 +1,46 @@
-<p>
-  test-service works!
-</p>
+<div class="armor-list-container">
+  <div class="armor-header">All Armor</div>
+  <div class="armor-list" *ngIf="allArmor$ | async as allArmor">
+    <ul *ngFor="let a of allArmor">
+      <li>ID: {{ a.id }}</li>
+      <li>Name: {{ a.armorName }}</li>
+      <li>Level: {{ a.armorLevel }}</li>
+      <li>Type: {{ a.armorType }}</li>
+      <li>Health: {{ a.armorStats?.health }}</li>
+      <li>Power: {{ a.armorStats?.power }}</li>
+      <li>Defence: {{ a.armorStats?.defense }}</li>
+    </ul>
+  </div>
+</div>
+
+<hr />
+
+<div class="weapons-list-container">
+  <div class="weapons-header">All Weapons</div>
+  <div class="weapons-list" *ngIf="weapons$ | async as weapons">
+    <ul *ngFor= "let w of weapons">
+      <li>ID: {{ w.id }}</li>
+      <li>Name: {{ w.weaponName }}</li>
+      <li>Power: {{ w.weaponStats?.power }}</li>
+      <li>Defense: {{ w.weaponStats?.defense }}</li>
+      <li>Damage: {{ w.weaponStats?.damage }}</li>
+      <li>Level: {{ w.weaponLevel }}</li>
+      <li>BaseDamage: {{ w.weaponBaseDamage }}</li>
+    </ul>
+  </div>
+</div>
+
+<hr />
+
+<div class="potions-list-container">
+  <div class="potions-header">All Potions</div>
+  <div class="potions-list" *ngIf="potions$ | async as potions">
+    <ul *ngFor= "let p of potions">
+      <li>ID: {{ p.id }}</li>
+      <li>Name: {{ p.potionName }}</li>
+      <li>Strength: {{ p.potionStrength }}</li>
+      <li>Duration: {{ p.potionEffectDuration }}</li>
+      <li>EffectType: {{ p.potionEffectType }}</li>
+    </ul>
+  </div>
+</div>
